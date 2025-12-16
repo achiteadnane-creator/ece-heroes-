@@ -1,14 +1,10 @@
 #ifndef MENU_H
 #define MENU_H
 
-// Affiche le menu principal avec les 4 options
-void afficherMenu();
+void afficherMenu(); // affiche le menu
 
-// Affiche les règles du jeu
-void afficherRegles();
+void afficherRegles(); // afffiche les régles du jeu 
 
-// Attend et retourne le choix de l'utilisateur (1-4)
-int attendreChoixMenu();
+int attendreChoixMenu(); // choix fait dans le menu 
 
 #endif
-
