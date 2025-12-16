@@ -1,5 +1,5 @@
-#ifndef NIVEAUX_H
-#define NIVEAUX_H
+#ifndef NIVEAU_H
+#define NIVEAU_H
 
 #include <stdbool.h>
 #include <time.h>

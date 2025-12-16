@@ -1,8 +1,9 @@
-#include "niveaux.h"
+
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "niveau.h"
 
 /* ==================== Etat interne ==================== */
 static ContratItems *g_contrat_ptr = NULL;
