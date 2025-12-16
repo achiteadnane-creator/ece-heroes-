@@ -1,16 +1,33 @@
 #ifndef PLATEAU_H
 #define PLATEAU_H
 
-void initialiserPlateau(int plateau[25][45]); //initialise le plateau de jeu 
+#include <stdbool.h>
 
-int detecterFigures(int plateau[25][45]); // detecte les différentes figure 
+/* ===== PARAMÈTRES DU JEU ===== */
+#define PLATEAU_H 10
+#define PLATEAU_W 15
+#define NB_ITEMS 4
 
-void eliminerItems(int plateau[25][45], int contrat[5]); // supprime les items 
+#define CASE_VIDE 0   // 0 = case vide, 1..4 = items
 
-void faireTomberItems(int plateau[25][45]); //fait tomber les items 
+/* ===== FONCTIONS DU MODULE PLATEAU ===== */
 
-void completerPlateau(int plateau[25][45]); //
+// Génère un plateau aléatoire sans match-3 immédiat
+void genererPlateau(int plateau[PLATEAU_H][PLATEAU_W]);
 
-void verifierStabilite(int plateau[25][45], int contrat[5]);
+// Applique la gravité (les items tombent)
+void faireTomberItems(int plateau[PLATEAU_H][PLATEAU_W]);
+
+// Remplit les cases vides avec de nouveaux items
+void remplirTrous(int plateau[PLATEAU_H][PLATEAU_W]);
+
+// Détecte les figures (match >= 3)
+// Retourne le nombre de figures trouvées
+int detecterFigures(int plateau[PLATEAU_H][PLATEAU_W]);
+
+// Supprime les figures, met à jour le contrat,
+// puis stabilise le plateau (gravité + remplissage)
+void eliminerItems(int plateau[PLATEAU_H][PLATEAU_W],
+                   int contrat_items[NB_ITEMS]);
 
 #endif
