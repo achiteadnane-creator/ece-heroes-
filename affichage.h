@@ -1,8 +1,8 @@
 #ifndef AFFICHAGE_H
 #define AFFICHAGE_H
 
-#define LIGNES 25
-#define COLONNES 45
+#define LIGNES 10
+#define COLONNES 15
 #define NB_TYPES 5
 
 /* -------------------------------------------------------------
